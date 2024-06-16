@@ -1,0 +1,13 @@
+---
+const { src } = Astro.props;
+---
+
+<li class="snap-start min-w-1/2">
+    <a href="#">
+        <img
+            src={src}
+            alt="client logo"
+            class="w-full filter grayscale hover:grayscale-0 transition duration-300"
+        />
+    </a>
+</li>

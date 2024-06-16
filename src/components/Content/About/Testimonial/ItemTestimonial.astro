@@ -1,0 +1,26 @@
+---
+// Props definition
+interface TestimonialProps {
+    imgSrc: string;
+    alt: string;
+    name: string;
+    text: string;
+}
+const { imgSrc, alt, name, text } = Astro.props as TestimonialProps;
+---
+
+<li class="snap-center min-w-full">
+    <div class="relative">
+        <figure
+            class="absolute top-0 left-0 translate-x-3.75 -translate-y-6.25 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg shadow"
+        >
+            <img src={imgSrc} alt={alt} width="60" />
+        </figure>
+        <h4 class="mb-1.75">
+            {name}
+        </h4>
+        <div class="text-gray-400 text-sm font-light leading-6 overflow-hidden">
+            <p>{text}</p>
+        </div>
+    </div>
+</li>

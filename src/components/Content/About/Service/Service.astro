@@ -1,0 +1,41 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+
+const content = [
+    {
+        title: "Web design",
+        description:
+            "The most modern and high-quality design made at a professional level.",
+    },
+    {
+        title: "Web development",
+        description:
+            "High-quality development of sites at the professional level.",
+    },
+    {
+        title: "Mobile apps",
+        description:
+            "Professional development of applications for iOS and Android.",
+    },
+    {
+        title: "Photography",
+        description:
+            "I make high-quality photos of any category at a professional level.",
+    },
+];
+---
+
+<section class="mb-9">
+    <h3 class="mb-5">What i'm doing</h3>
+
+    <ul class="grid gap-5">
+        {
+            content.map((item) => (
+                <ServiceCard
+                    title={item.title}
+                    description={item.description}
+                />
+            ))
+        }
+    </ul>
+</section>

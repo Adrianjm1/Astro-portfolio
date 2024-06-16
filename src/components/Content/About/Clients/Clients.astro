@@ -1,0 +1,41 @@
+---
+import { rootImages } from "../../../../utils/rootImages";
+import ClientItem from "./ClientItem.astro";
+
+const clients = [
+    {
+        name: "Client 1",
+        src: rootImages.myAvatar,
+    },
+    {
+        name: "Client 2",
+        src: rootImages.myAvatar,
+    },
+    {
+        name: "Client 3",
+        src: rootImages.myAvatar,
+    },
+    {
+        name: "Client 4",
+        src: rootImages.myAvatar,
+    },
+    {
+        name: "Client 5",
+        src: rootImages.myAvatar,
+    },
+    {
+        name: "Client 6",
+        src: rootImages.myAvatar,
+    },
+];
+---
+
+<section class="mb-3.75">
+    <h3 class="clients-title">Clients</h3>
+
+    <ul
+        class="flex justify-start items-start gap-3.75 m-0 p-6 overflow-x-auto scroll-smooth overscroll-x-contain snap-x snap-mandatory scroll-pl-6 scroll-pr-6"
+    >
+        {clients.map((item) => <ClientItem {...item} />)}
+    </ul>
+</section>
