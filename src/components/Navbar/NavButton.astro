@@ -3,8 +3,5 @@ const { name } = Astro.props;
 ---
 
 <li class="navbar-item">
-    <button
-        class="navbar-link text-gray-300 text-base py-5 px-1.5 transition-colors duration-200 hover:text-gray-100 focus:text-gray-100 active:text-yellow-400"
-        style="--fs-8: 14px;">{name}</button
-    >
+    <button class="navbar-link active" data-nav-link>{name}</button>
 </li>

@@ -10,12 +10,8 @@ const items = [
 ];
 ---
 
-<nav
-    class="fixed bottom-0 left-0 w-full bg-opacity-75 bg-black backdrop-blur-md border border-gray-800 rounded-tl-lg rounded-tr-lg shadow-lg z-50 md:rounded-tl-[20px] md:rounded-tr-[20px] lg:absolute lg:bottom-auto lg:top-0 lg:left-auto lg:right-0 lg:w-max lg:border-radius-[0_20px] lg:px-[20px] lg:shadow-none"
->
-    <ul
-        class="flex flex-wrap justify-center items-center p-0 px-2.5 gap-[20px] lg:gap-[30px] lg:px-[20px]"
-    >
+<nav class="navbar">
+    <ul class="navbar-list">
         {items.map((item) => <NavButton {...item} />)}
     </ul>
 </nav>

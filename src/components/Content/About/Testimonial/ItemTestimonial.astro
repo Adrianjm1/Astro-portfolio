@@ -9,17 +9,16 @@ interface TestimonialProps {
 const { imgSrc, alt, name, text } = Astro.props as TestimonialProps;
 ---
 
-<li class="snap-center min-w-full">
-    <div class="relative">
-        <figure
-            class="absolute top-0 left-0 translate-x-3.75 -translate-y-6.25 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg shadow"
-        >
-            <img src={imgSrc} alt={alt} width="60" />
+<li class="testimonials-item">
+    <div class="content-card" data-testimonials-item>
+        <figure class="testimonials-avatar-box">
+            <img src={imgSrc} alt={alt} width="60" data-testimonials-avatar />
         </figure>
-        <h4 class="mb-1.75">
-            {name}
+        <h4 class="h4 testimonials-item-title" data-testimonials-title>
+            Daniel lewis
         </h4>
-        <div class="text-gray-400 text-sm font-light leading-6 overflow-hidden">
+
+        <div class="testimonials-text" data-testimonials-text>
             <p>{text}</p>
         </div>
     </div>

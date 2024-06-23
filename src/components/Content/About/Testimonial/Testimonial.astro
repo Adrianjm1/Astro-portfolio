@@ -34,11 +34,10 @@ const testimonials = [
 ];
 ---
 
-<section class="mb-7.5">
-    <h3 class="mb-5">Testimonials</h3>
-    <ul
-        class="flex justify-start items-start gap-3.75 m-0 p-6 pb-8.75 overflow-x-auto scroll-smooth overscroll-x-contain snap-x snap-mandatory"
-    >
+<section class="testimonials">
+    <h3 class="h3 testimonials-title">Testimonials</h3>
+
+    <ul class="testimonials-list has-scrollbar">
         {
             testimonials.map((testimonial) => (
                 <ItemTestimonial

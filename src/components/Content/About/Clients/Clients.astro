@@ -30,12 +30,10 @@ const clients = [
 ];
 ---
 
-<section class="mb-3.75">
-    <h3 class="clients-title">Clients</h3>
+<section class="clients">
+    <h3 class="h3 clients-title">Clients</h3>
 
-    <ul
-        class="flex justify-start items-start gap-3.75 m-0 p-6 overflow-x-auto scroll-smooth overscroll-x-contain snap-x snap-mandatory scroll-pl-6 scroll-pr-6"
-    >
+    <ul class="clients-list has-scrollbar">
         {clients.map((item) => <ClientItem {...item} />)}
     </ul>
 </section>

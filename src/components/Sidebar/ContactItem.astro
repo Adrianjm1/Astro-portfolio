@@ -2,15 +2,12 @@
 const { title, link, linkText, icon } = Astro.props;
 ---
 
-<li class="flex items-center">
-    <div
-        class="relative before:bg-eerie-black-1 bg-gradient-to-br from-[hsl(240,1%,25%)] to-[hsl(0,0%,19%)] w-9 h-9 rounded-md flex justify-center items-center text-lg text-orange-yellow-crayola shadow-custom z-10 mr-2"
-        set:html={icon}
-    />
+<li class="contact-item">
+    <div class="icon-box" set:html={icon} />
+
     <div class="contact-info">
-        <p class="text-xs text-light-gray">{title}</p>
-        <a href={link} class="text-white text-xs font-400">
-            {linkText}
-        </a>
+        <p class="contact-title">{title}</p>
+
+        <a href={link} class="contact-link"> {linkText}</a>
     </div>
 </li>
