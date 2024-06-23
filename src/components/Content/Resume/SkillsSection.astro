@@ -1,0 +1,24 @@
+---
+import SkillItem from "./SkillItem.astro";
+
+interface Skill {
+    name: string;
+    percentage: string;
+}
+
+const { skills } = Astro.props;
+---
+
+<section class="skill">
+    <h3 class="h3 skills-title">My skills</h3>
+    <ul class="skills-list content-card">
+        {
+            skills.map((skill: Skill) => (
+                <SkillItem
+                    skillName={skill.name}
+                    percentage={skill.percentage}
+                />
+            ))
+        }
+    </ul>
+</section>

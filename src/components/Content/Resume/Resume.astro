@@ -1,0 +1,31 @@
+---
+import SkillsSection from "./SkillsSection.astro";
+import TimelineSection from "./TimelineSection.astro";
+---
+
+<article class="resume" data-page="resume">
+    <header>
+        <h2 class="h2 article-title">Resume</h2>
+    </header>
+    <TimelineSection
+        sectionTitle="Education"
+        items={[
+            {
+                title: "University school of the arts",
+                dateRange: "2007 — 2008",
+                description: "Nemo enims ipsam voluptatem...",
+            },
+        ]}
+    />
+    <TimelineSection
+        sectionTitle="Experience"
+        items={[
+            {
+                title: "Creative director",
+                dateRange: "2015 — Present",
+                description: "Nemo enim ipsam voluptatem...",
+            },
+        ]}
+    />
+    <SkillsSection skills={[{ name: "Web design", percentage: 80 }]} />
+</article>

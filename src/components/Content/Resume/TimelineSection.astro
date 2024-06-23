@@ -1,0 +1,30 @@
+---
+import TimelineItem from "./TimelineItem.astro";
+
+const { sectionTitle, items } = Astro.props;
+interface Item {
+    title: string;
+    dateRange: string;
+    description: string;
+}
+---
+
+<section class="timeline">
+    <div class="title-wrapper">
+        <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <h3 class="h3">{sectionTitle}</h3>
+    </div>
+    <ol class="timeline-list">
+        {
+            items.map((item: Item) => (
+                <TimelineItem
+                    title={item.title}
+                    dateRange={item.dateRange}
+                    description={item.description}
+                />
+            ))
+        }
+    </ol>
+</section>

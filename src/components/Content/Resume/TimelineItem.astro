@@ -1,0 +1,9 @@
+---
+const { title, dateRange, description } = Astro.props;
+---
+
+<article>
+    <h4 class="h4 timeline-item-title">{title}</h4>
+    <span>{dateRange}</span>
+    <p class="timeline-text">{description}</p>
+</article>

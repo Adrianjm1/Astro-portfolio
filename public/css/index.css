@@ -157,7 +157,7 @@ textarea {
     outline-color: var(--orange-yellow-crayola);
 }
 
-html {
+* {
     font-family: var(--ff-poppins);
 }
 
